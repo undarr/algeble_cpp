@@ -1,7 +1,0 @@
-Variant 10-character game leaderboard:
-No. Name.      Guess. Round. Time.  Gameseed:
-1.  
-2.  
-3.  
-4.  
-5.  
