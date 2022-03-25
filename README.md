@@ -19,8 +19,10 @@ When creating a custom game, a variety of custom settings can be selected by the
 Players can choose 8-10 as the length of the algebraic expression
 * Equation generation method
 
+Players can add a set of custom equations in the files in the custom equations directory, the computer will then pick a valid expression from the file as the hidden expression. The computer may also generate a random valid expression on its own.
 * Maximum round count
 
+Players can set the maximum round and clue count 
 * Guess count
 
 * Extra logic
@@ -40,19 +42,28 @@ Players can choose 8-10 as the length of the algebraic expression
 
 * Game structure
 
+A user-friendly game menu, gamemode selection menu and in-game menu is created to faciliate user inputs.
 * Different display modes
+
 A detailed display mode can be selected by new players to adapt with the input requirements, while a simple display mode can be selected to minimize display length.
 * Continue game
+
 A function to load a previously on-going game saved in a .txt file
 * Load gameseed
-A gameseed is a 13-digit string that uniquely identifies all custom settings of a game. 2 games with the same gameseed have the same settings and random variables but can be played differently. Players can share the gameseed once they encounter an interesting game.
-* View High Score
-High scores are setted for standard and variant 
+
+A gameseed is a 13-digit string that uniquely identifies all custom settings of a game. 2 games with the same gameseed have the same settings and random variables (when using the same OS & platform) but can be played differently. Players can share the gameseed once they encounter an interesting game.
+* Leaderboard
+
+6 leaderboards are setted for standard and variant games of different expression length. A reset function is 
 * Show all clues
 
 * Surrender function
 
+
 * Error handling
+
+* Trimspace
+Spaces before and after the input text will be automatically removed.
 
 ## Code requirements
 * Generation of random game sets or events\n
