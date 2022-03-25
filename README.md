@@ -94,4 +94,4 @@ Our main program, consisting of 39 self-defined functions is separated into 10 c
 ## Gameplay
 Here is a youtube video demonstrating the gameplay: www.
 ## Compilation and execution instructions
-To start the game, the first type "make main" in the terminal and it will create or update 10 .o files and the main program, then type "./main" to start the game in the terminal. Typing "make clean" will remove all .o files and the main program.
+To start the game, the first type "make main" in the terminal and it will create or update 10 .o files and the main program, then type "./main" to start the game in the terminal. Typing "make clean" will remove all .o files and the main program. Our code can be successfully compiled in the Computer Science department's academy11 server.
