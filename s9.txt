@@ -1,7 +1,0 @@
-Standard 9-character game leaderboard:
-No. Name.      Round. Time.  Gameseed:
-1.  
-2.  
-3.  
-4.  
-5.  
