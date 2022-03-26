@@ -66,9 +66,9 @@ When creating a custom game, a variety of custom settings can be selected by the
 * Show all clues
 
   This function during the cluephase will display all clues typed by the user before in 2 different formats, which helps players view and use the clues more conveniently.
-* Show all clues
+* Show previous guesses
   
-  Similar to the prior, this function will display all previous guesses by the user during the guessphase in ascending order.
+  Similar to the prior feature, this function will display all previous guesses by the user during the guessphase in ascending order.
 * Surrender function
 
   A surrender option is set during the guessphase, after surrendering, the game will reveal the hidden expression and its result.
