@@ -44,10 +44,10 @@ When creating a custom game, a variety of custom settings can be selected by the
 ## Implemented features:
 * Random expression generation
 
-
+  Our random expression generation is programed to hope that each digit, each operator and each possible combination of operator's position can appear at the closest distribution. To do so, we tested the program to generate 1,000,000 expressions (valid or not) at equal disturbution of digit, operator and possible combination of operator's position. We then compared the data to the proportion of digits, operators and possible combination of operator's position of those in valid expressions and finally set up a bias proportion that digits, operators and possible combination of operator's position appear to compensate for the difference in proportion of digits, operators and possible combinations of operation that appeared in valid expressions. For example when generating a random operator, a "/" is more likely to be generated than a "+" since equations containing "/" are less likely to be valid compared with those with a "+". When generating an expression, the program chooses a random combination of operator's position as an template with the bias distribution. The positions are filled such that no numbers in the expression have more than 4 digits. Then, it fills the digits and operators in 1 by 1 using the bias distribution. Lastly, it checks if the expression is valid and if the result of the expression is a 3-digit integer. If not, the computer will repeat the generation process until a valid expression is generated. It is tested that the probability of the computer to generate a valid expression using the bias disturbution in around 1.5%.
 * Custom equations
 
-
+  9 files named 1.txt to 9.txt in the custom_equations folder can be editted by the user for them to set custom equations for the game. Players simply open a file and paste in their custom set equations and select the corresponding file when creating a custom game. The program will then choose a random expression from all the valid expressions in the corresponding file. A random equation will be generated if there is an error when opening the file, or when there is no valid expressions in the file.
 * Game structure
 
   A user-friendly game menu, game mode selection menu and in-game menu is created to facilitate user inputs.
@@ -62,10 +62,13 @@ When creating a custom game, a variety of custom settings can be selected by the
   A gameseed is a 13-digit string that uniquely identifies all custom settings of a game. 2 games with the same gameseed have the same settings and random variables (when using the same OS & platform) but can be played differently. Players can share the gameseed once they encounter an interesting game.
 * Leaderboards
 
-  6 leaderboards are set for standard and variant games of different expression lengths. A reset function is provided to reset all leaderboards. A leaderboard will only be updated and resorted accordingly when a player enters their name after their score entered the top 5 of the corresponding game category in a non-custom and non-loaded game. Game scores are sorted by the number of guesses, followed by the number of rounds taken and the time taken. Time will only be kept for continuous games (games without exiting/crashing in the middle) and N.A. will be displayed for games that use the "Continue Game" function. Leaderboards can be viewed from the game menu. 
+  6 leaderboards are set for standard and variant games of different expression lengths. A reset function is provided to reset all leaderboards. A leaderboard will only be updated and resorted accordingly when a player enters their name after their score entered the top 5 of the corresponding game category in a non-custom and non-loaded game. Game scores are sorted by the number of guesses, followed by the number of rounds taken and the time taken. Time will only be kept for continuous games (games without exiting/crashing in the middle) and N.A. will be displayed for games that use the "Continue Game" function. Leaderboards can be viewed from the game menu.
 * Show all clues
 
-  This function during the cluephase, 
+  This function during the cluephase will display all clues typed by the user before in 2 different formats, which helps players view and use the clues more conveniently.
+* Show all clues
+  
+  Similar to the prior, this function will display all previous guesses by the user during the guessphase in ascending order.
 * Surrender function
 
   A surrender option is set during the guessphase, after surrendering, the game will reveal the hidden expression and its result.
@@ -77,7 +80,7 @@ When creating a custom game, a variety of custom settings can be selected by the
   Spaces before and after the input text will be automatically removed.
 ## Code requirements
 * Generation of random game sets or events
-
+  Please refer to "Random expression generation" and "Custom equations" in the implemented features. 
 
 * Data structures for storing game status
 
@@ -92,6 +95,6 @@ When creating a custom game, a variety of custom settings can be selected by the
 
   Our main program, consisting of 39 self-defined functions is separated into 10 categories, each with a .h and a .cpp file. The main.cpp will be compiled with the help of the makefile and executed to start the game.
 ## Gameplay
-Here is a youtube video demonstrating the gameplay: www.
+Here is a youtube video demonstrating the gameplay: https://youtu.be/chR2b6m2poU
 ## Compilation and execution instructions
 To start the game, the first type "make main" in the terminal and it will create or update 10 .o files and the main program, then type "./main" to start the game in the terminal. Typing "make clean" will remove all .o files and the main program. Our code can be successfully compiled in the Computer Science department's academy11 server.
