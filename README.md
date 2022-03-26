@@ -56,7 +56,7 @@ When creating a custom game, a variety of custom settings can be selected by the
   A detailed display mode can be selected by new players to adapt to the input requirements, while a simple display mode can be selected to minimize display length.
 * Continue game
 
-  A function to load a previously ongoing game saved in a .txt file. An ongoing game will constantly "update its status" on the cgame.txt file in the folder and the file will be validated and loaded when the validation passes to where the game was last left off. A gamefile with the wrong format will be ignored and cleared when a new game has started.
+  A function to load a previously ongoing game saved in a .txt file. An ongoing game will constantly "update its status" on the cgame.txt file in the current_game folder and the file will be validated and loaded to where the game was last left off if the validation passes. A gamefile with the wrong format will be ignored and cleared when a new game has started.
 * Load gameseed
 
   A gameseed is a 13-digit string that uniquely identifies all custom settings of a game. 2 games with the same gameseed have the same settings and random variables (when using the same OS & platform) but can be played differently. Players can share the gameseed once they encounter an interesting game.
