@@ -80,8 +80,8 @@ When creating a custom game, a variety of custom settings can be selected by the
   Spaces before and after the input text will be automatically removed.
 ## Code requirements
 * Generation of random game sets or events
+  
   Please refer to "Random expression generation" and "Custom equations" in the implemented features. 
-
 * Data structures for storing game status
 
   An integer and a string array are used to store the user's guesses and clues during the game respectively. Several variables are used to store game settings. A .txt file is used to store game status so the game can be loaded back after a game crash and a struct is used to store high scores on the leaderboard. Several .txt files are also used to store the high scores on each leaderboard.
