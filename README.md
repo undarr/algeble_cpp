@@ -37,7 +37,7 @@ When creating a custom game, a variety of custom settings can be selected by the
   When enabled, expression redundancy such as 0+, 0*, 0/, +0, -0, \*0, 1*, 1/, \*1, /1 are allowed in the expressions typed by players, and vice versa. 
 * Clue analysis (Enabled in both standard and variant games)
 
-  When enabled, analysis of previous clues will be shown when displaying previous clues.
+  When enabled, analysis of previous clues will be shown when displaying previous clues. Analysis include the hidden expression with all correct guesses (Os) filled in, and also the state of each character. The state of the characters are "O" if there is at least 1 "O" for the character, "#" if there is at least 1 "#" but no "O"s for the character, "X" if it is known that the character does not exist in the hidden expression and "?" if the character has not been used in the clues.
 * Repeated guesses (Disabled in both standard and variant games)
 
   When enabled, the same guess made during the guessphase (which is a waste of a guess), is allowed.
@@ -87,7 +87,7 @@ When creating a custom game, a variety of custom settings can be selected by the
   An integer and a string array are used to store the user's guesses and clues during the game respectively. Several variables are used to store game settings. A .txt file is used to store game status so the game can be loaded back after a game crash and a struct is used to store high scores on the leaderboard. Several .txt files are also used to store the high scores on each leaderboard.
 * Dynamic memory management
 
-  There is dynamic memory allocation when players choose to use custom equations. A 0-sized dynamic array is first created before reading through a chosen .txt file to get valid expressions. Every time a valid expression is detected, the size of the array will be expanded and that expression will be added to the dynamic array. After closing the .txt file, an expression of specified length will be randomly drawn from the dynamic array as the hidden answer.
+  There is dynamic memory allocation when players choose to use custom equations in the genCE function. A 0-sized dynamic array is first created before reading through a chosen .txt file to get valid expressions. Every time a valid expression is detected, the size of the array will be expanded and that expression will be added to the dynamic array. After closing the .txt file, an expression of specified length will be randomly drawn from the dynamic array as the hidden answer.
 * File input/output
 
   There is file input when players choose to use custom equations. Players can prepare a set of equations for the game and the function genCE() will choose a random valid equation from the corresponding .txt file in the custom_equation directory. There is also file input when players choose to view the leaderboard, the program will read and output the data in the corresponding .txt file in the leaderboard directory to the screen. There is file modification when a player enters the leaderboard in a standard or variant game, the corresponding .txt file in the leaderboard directory will be updated accordingly.
